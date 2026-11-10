@@ -5,11 +5,26 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-assets>
+        <img id="sky" src="assets/sky.jpg">
+        <img id="cone" src="Assets/cone.jpeg">
+        <img id ="sphere" src="Assets/icecream.avif">
+        <img id="box" src="Assets/sand.jpg">
+
+      </a-assets>
+
+      <a-sky src="#sky" radius="30"></a-sky>
+      <a-cone src="#cone" position="2 0 -3" rotation = "0 0 180" radius-bottom=".7" radius-top="0" height="2" ></a-cone>
+      <a-sphere src="#sphere" position="2 1 -3" radius=".7" ></a-sphere>
+      <a-box src="#box" position="-1 0.5 -3" rotation="0 0 0" width="2" height="1" depth="1" ></a-box>
+      <a-box src="#box" position="-2.5 0.5 -3" rotation="0 0 0" width="1" height="2" depth="1" ></a-box>
+      <a-box src="#box" position="0.5 0.5 -3" rotation="0 0 0" width="1" height="2" depth="1" ></a-box>
+      <a-cone src="#box" position="-2.5 2 -3" rotation="0 45 0" height="1" radius-bottom="0.7" radius-top="0" segments-radial="4"  material="flatShading: true" ></a-cone>
+      <a-cone src="#box" position="0.5 2 -3" rotation="0 45 0" height="1" radius-bottom="0.7" radius-top="0" segments-radial="4" segments-height="1" material="flatShading: true" ></a-cone>
+
+
+
+      <a-plane position="0 -1 -4" rotation="-90 0 0" width="8" height="4" color="#7BC8A4"></a-plane>
     </a-scene>
   </body>
 </html>
